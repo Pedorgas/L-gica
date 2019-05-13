@@ -1,4 +1,4 @@
-from random import randint
+from random import randint  # Importa a funcao de gerar numeros aleatorios
 
 print("hamburger")
 print("jogo do dado")
