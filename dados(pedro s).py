@@ -1,6 +1,7 @@
 from random import randint
 
 print("hamburger")
+print("jogo do dado")
 
 dado1=randint(1,6)
 dado2=randint(1,6)
