@@ -1,36 +1,37 @@
 # Lista de exercícios 1 - Estruturas
 
-
+#GOOD
 def soma_dois_inteiros(a, b):
     """ Recebe dois números inteiros, e retorna a sua soma"""
     soma = a + b    
     return soma
-
+#GOOD
 def metro_para_milimetros(metros):
     """ Recebe um valor em metros, e retorna o valor em milímetros"""
     mm = metros*1000
     return mm
-
+#GOOD
 def tempo_para_percorrer_uma_distancia(distancia, velocidade):
-    """ Recebe uma distância e a velocidade de movimentação, e retorna
+    """
+    Recebe uma distância e a velocidade de movimentação, e retorna
     as horas que seriam gastas para percorrer em linha reta"""
     tempo = distancia/velocidade
     return round(tempo,2)
-
+#GOOD
 def aumento_salarial(salario, porcentagem):
     """ Recebe um salário e sua porcentagem de aumento, e retorna
     o novo salário"""
     p=salario*porcentagem/100
     aumento=p+salario
     return round(aumento,2)
-
+#GOOD
 def preco_com_desconto(preco_original, percentual_desconto):
     """ Recebe um preço e sua porcentagem de desconto, e retorna
     novo preço"""
     P= preco_original*percentual_desconto/100
     desconto=preco_original - P
     return round(desconto,2)
-
+#GOOD
 def dias_para_segundos(dias, horas, minutos, segundos):
     """ Recebe uma data em dias com horas, minutos e segundos, e retorna
     a data em segundos"""
@@ -39,19 +40,19 @@ def dias_para_segundos(dias, horas, minutos, segundos):
     m = minutos * 60
     s= d + m + h + segundos
     return round(s,2)
-
+#GOOD
 def celsius_para_fahrenheit(c):
     """ Recebe uma temperatura em celsius, e retorna a temperatura
     em fahrenheit"""
     F=(c * 9/5) +32
     return F
-
+#GOOD
 def fahrenheit_para_celsius(f):
     """ Recebe uma temperatura em fahrenheit, e retorna a temperatura  
     em celsius"""
     C=(f - 32) * 5/9
     return round(C,2)
-
+#GOOD
 def preco_aluguel_carro(dias, km):
     """ Recebe uma quantidade de dias que o carro foi alugado e a
     quantidade de quilômetros rodados, e retorna o valor a ser pago.
@@ -60,31 +61,36 @@ def preco_aluguel_carro(dias, km):
     k=km * 0.15
     aluguel=d + k
     return round(aluguel,2)
-
+#GOOD
 def dias_perdidos_por_fumar(cigarros_fumados_por_dia, anos_fumando):
     """ Recebe uma quantidade de cigarros fumados por dia e a quantidade
-     de anos que fuma, e retorna o total de dias perdidos, sabendo que
-     cada cigarro reduz a vida em 10 minutos."""
+ de anos que fuma, e retorna o total de dias perdidos, sabendo que
+ cada cigarro reduz a vida em 10 minutos."""
     dias= anos_fumando * 365
     minutos= cigarros_fumados_por_dia * 10
     dp= minutos / 1440
     dt= dp* dias
     return round(dt,2)
-
-
+#GOOD
 def dois_elevado_a_um_milhao():
     """ Calcula dois elevado a um milhão, e retorna a quantidade de
     algarismos"""
     doismillon=2 **1000000
     digdm= str(doismillon)
     return len(digdm)
-
+#GOOD
 def media_final_aprovado_reprovado(p1, p2, ep1, ep2):
     """ Recebe as notas das 2 provas e 2 exercícios de programação e retorna
     se o aluno foi ou não aprovado. As provas têm peso 7 e os exercícios
     têm peso 3. Cada parcial tem peso igual."""
-
-
+    n1= p1* 0.70 + p2* 0.70
+    n2= ep1* 0.30 + ep2* 0.30
+    media=n1 + n2 /4
+    if media>7.0:
+        return True
+    else:
+        return False
+#GOOD
 def salario(valor_hora, horas_mensais):
     """ Recebe quanto ganha por hora e quantas horas trabalho ao mês,
     e retorna o salário líquido.
@@ -93,21 +99,30 @@ def salario(valor_hora, horas_mensais):
     - INSS é 8% do salário bruto
     - IR é 11% do salário bruto
     - Sindicato é 5% do salário bruto"""
-
-
+    Solidmoney=valor_hora* horas_mensais
+    desconto=Solidmoney * 0.24
+    liquidmoney = Solidmoney - desconto
+    return int(liquidmoney)
+#question
 def tinta(metros_pintar):
     """ Recebe quantos metros quadrados precisa pintar,
     e retorna a quantidade de latas de tinta a comprar.
     A cobertura da tinta é de 3 metros por litro de tinta
     Cada lata possui 18 litros de tinta"""
+    lata=54
+    pintar=metros_pintar-lata
+    quant_lata=1
+    
 
-
+           
+    
+#question
 def duzias(ovos):
     ''' Receba o número de ovos e devolva a quantidade de dúzias
     correspondente. Considere sempre dúzias cheias, arredondando pra
     cima se necessário.
     '''
-
+        
 
 def decompor_numero(numero):
     '''
@@ -242,10 +257,10 @@ def main():
     test(tempo_para_percorrer_uma_distancia(1330, 20), 66.50)
     test(tempo_para_percorrer_uma_distancia(1000, 100), 10.00)
     test(tempo_para_percorrer_uma_distancia(1000, 123), 8.13)
-    test(tempo_para_percorrer_uma_distancia(100000, 201), 497.51)
+    test(tempo_para_percorrer_uma_distancia(1eggbox = 0
 
-    print('Aumento salarial baseado na porcentagem de aumento:')
-    test(aumento_salarial(1330, 20), 1596.00)
+    print('Aumento salarial baseado na porcen    if ovos == 12
+    test(aumento_salarial(1330, 20), 1596.00)        eggbox= eggbox + 1
     test(aumento_salarial(1000, 0), 1000.00)
     test(aumento_salarial(1000.10, 123), 2230.22)
     test(aumento_salarial(0.0, 200), 0.00)
