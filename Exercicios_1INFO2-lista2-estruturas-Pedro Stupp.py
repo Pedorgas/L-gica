@@ -137,10 +137,10 @@ def tinta(metros_pintar):
     e retorna a quantidade de latas de tinta a comprar.
     A cobertura da tinta é de 3 metros por litro de tinta
     Cada lata possui 18 litros de tinta"""
-    lata = 54
-    quant_lata = 1
-    pintar = metros_pintar-lata
-    
+    quanto_pintar = metros_pintar/3
+    quanta_lata = quanto_pintar/18
+    return round(quanta_lata)
+
 
 # question
 def duzias(ovos):
@@ -156,7 +156,6 @@ def decompor_numero(numero):
     centenas, dezenas e unidades do mesmo.
     Obs.: não utilize operações com strings
     '''
-
 
 
 def palindrome(texto):
