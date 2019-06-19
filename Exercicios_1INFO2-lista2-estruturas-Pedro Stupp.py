@@ -7,7 +7,6 @@ def soma_dois_inteiros(a, b):
     """ Recebe dois números inteiros, e retorna a sua soma"""
     soma = a + b
     return soma
-# GOOD
 
 
 def metro_para_milimetros(metros):
@@ -129,7 +128,7 @@ def salario(valor_hora, horas_mensais):
     desconto = Solidmoney * 0.24
     liquidmoney = Solidmoney - desconto
     return int(liquidmoney)
-# question
+# good
 
 
 def tinta(metros_pintar):
@@ -139,10 +138,14 @@ def tinta(metros_pintar):
     Cada lata possui 18 litros de tinta"""
     quanto_pintar = metros_pintar/3
     quanta_lata = quanto_pintar/18
-    return round(quanta_lata)
-
+    if type(quanta_lata) == float:
+        quanta_lata = int(quanta_lata)
+        quanta_lata = quanta_lata + 1
+    return quanta_lata
 
 # question
+
+
 def duzias(ovos):
     ''' Receba o número de ovos e devolva a quantidade de dúzias
     correspondente. Considere sempre dúzias cheias, arredondando pra
@@ -151,27 +154,39 @@ def duzias(ovos):
 
 
 def decompor_numero(numero):
-    '''
+    '''return round(quanta_lata)
     Leia um número inteiro menor que 1000 e devolva a quantidade de
     centenas, dezenas e unidades do mesmo.
     Obs.: não utilize operações com strings
     '''
 
+# GOOD
+
 
 def palindrome(texto):
     """Faça uma função que verifique se uma textro passado é palíndrome,
     isto é, se é igual quando lido de trás pra frente."""
+    tex = texto[::1]
+    if tex == texto:
+        return True
+    else:
+        return False
 
 
 def troca_caixa(texto):
     """Vogais ficam em caixa alta (maiúsculas)
     Consoantes ficam em caixa baixa (minúsculas)"""
 
+# GOOD
+
 
 def imprime_mes_por_extenso(data):
     """Faça um programa que solicite a data de nascimento (dd/mm/aaaa)
     e imprima com o nome do mês por extenso
     """
+    mes_ano = {"05": "maio", "12": "dezembro"}
+    dia, mes, ano = data.split("/")
+    return dia + " " + "de" + " " + mes_ano[mes] + " " + "de" + " " + ano
 
 
 def encontra_caracter(texto, caracter_procurado):
@@ -182,54 +197,81 @@ def encontra_caracter(texto, caracter_procurado):
 def é_azarado(numero):
     """O último dígito não pode ser igual ao primeiro, porque isso dá azar."""
 
+# GOOD
+
 
 def ondernamento_contrario(lista):
     """ Devolve a lista invertida"""
+    atsil = lista[::-1]
+    return atsil
+
+# GOOD
 
 
 def maximo(lista):
     """ Calcule o maior número da 'lista' """
+    maxlista = max(lista)
+    return maxlista
 
 
 def minimo(lista):
     """ Calcule o menor número da 'lista' """
+    minlista = min(lista)
+    return minlista
 
 
 def maior_menor(lista):
     """ Calcule o maior e o menor numero da 'lista' """
+    maxlista = max(lista)
+    minlista = min(lista)
+    medlista = (maxlista, minlista)
+    return medlista
+
+# GOOD
 
 
 def media_saltos_lista(saltos):
     """Receba uma lista com os saltos de um atleta e calcule a média
     dos seus saltos, sabendo que o melhor e o pior saltos são desconsiderados.
     """
+    media = sum(saltos) / len(saltos)
+    return round(media, 1)
+# GOOD
 
 
 def contem(lista, item_procurado):
     """Verifica se uma lista contém um item e devolve um valor booleano."""
+    search = item_procurado in lista
+    return search
+# GOOD
 
 
 def conta(lista, item_procurado):
     """Informa quantas ocorrências de um item existem numa lista."""
+    contador = lista.count(item_procurado)
+    return contador
 
-
+#GOOD
 def mes_extenso(mes):
     """Receba um número correspondente ao mês e devolva o nome do mês,
     com 3 letras. Ex.: 1-jan, 2-fev, ..., 12-dez.
     Use uma lista com os nomes dos meses."""
-
-
+    messe= {1:'jan',2:'fev',3:'mar',4:'abr',5:'mai',6:'jun',7:'jul',8:'ago',9:'set',10:'out',11:'nov',12:'dez'}
+    return messe[mes]
+#GOOD
 def media_temperaturas(temperaturas):
     """Devolva a média das temperaturas.
     """
-
+    medtemp= sum(temperaturas)/len(temperaturas)
+    return medtemp
 
 def leet(texto):
     '''
     Converte texto em leet
     troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
     '''
-
+    #num deu
+    
 
 def apaga(s, n):
     """
@@ -238,7 +280,8 @@ def apaga(s, n):
     apaga('kitten', 1) -> 'ktten'
     apaga('kitten', 4) -> 'kittn'
     """
-
+    bruh=s [n] = ""
+    return bruh
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
