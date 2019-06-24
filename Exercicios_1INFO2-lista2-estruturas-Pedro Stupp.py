@@ -154,7 +154,7 @@ def duzias(ovos):
 
 
 def decompor_numero(numero):
-    '''return round(quanta_lata)
+    '''
     Leia um número inteiro menor que 1000 e devolva a quantidade de
     centenas, dezenas e unidades do mesmo.
     Obs.: não utilize operações com strings
@@ -270,7 +270,7 @@ def leet(texto):
     Converte texto em leet
     troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
     '''
-    #num deu
+   
     
 
 def apaga(s, n):
@@ -280,9 +280,7 @@ def apaga(s, n):
     apaga('kitten', 1) -> 'ktten'
     apaga('kitten', 4) -> 'kittn'
     """
-    bruh=s [n] = ""
-    return bruh
-
+    return s[:n] + s[n+1:]
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
 total = 0
