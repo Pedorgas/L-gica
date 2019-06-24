@@ -145,20 +145,30 @@ def tinta(metros_pintar):
 
 # question
 
-
+#GOOD
 def duzias(ovos):
     ''' Receba o número de ovos e devolva a quantidade de dúzias
     correspondente. Considere sempre dúzias cheias, arredondando pra
     cima se necessário.
     '''
+    egg = ovos/ 12
+    return round(egg)
 
 
+
+#GOOD
 def decompor_numero(numero):
     '''
     Leia um número inteiro menor que 1000 e devolva a quantidade de
     centenas, dezenas e unidades do mesmo.
     Obs.: não utilize operações com strings
     '''
+    numerO= int(numero)
+    centenas=numerO //100
+    be = numero %100
+    dezena= be//10
+    unidade= be% 10
+    return (centenas,dezena,unidade)
 
 # GOOD
 
@@ -176,7 +186,6 @@ def palindrome(texto):
 def troca_caixa(texto):
     """Vogais ficam em caixa alta (maiúsculas)
     Consoantes ficam em caixa baixa (minúsculas)"""
-
 # GOOD
 
 
@@ -187,16 +196,21 @@ def imprime_mes_por_extenso(data):
     mes_ano = {"05": "maio", "12": "dezembro"}
     dia, mes, ano = data.split("/")
     return dia + " " + "de" + " " + mes_ano[mes] + " " + "de" + " " + ano
-
-
+#GOOD
 def encontra_caracter(texto, caracter_procurado):
     """Receba um texto e retorne a localização da primeira vez que
     aparece o caracter especificado"""
-
-
+    sponge_boi_me_bob=texto.find(caracter_procurado,0)
+    return sponge_boi_me_bob
+#GOOD
 def é_azarado(numero):
     """O último dígito não pode ser igual ao primeiro, porque isso dá azar."""
-
+    bruh= numero[0]
+    moment = numero[-1]
+    if bruh == moment:
+        return True
+    else:
+        return False
 # GOOD
 
 
@@ -272,7 +286,7 @@ def leet(texto):
     '''
    
     
-
+#GOOD
 def apaga(s, n):
     """
     Seja uma string s e um inteiro n
