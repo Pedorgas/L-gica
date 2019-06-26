@@ -186,9 +186,16 @@ def palindrome(texto):
 def troca_caixa(texto):
     """Vogais ficam em caixa alta (maiúsculas)
     Consoantes ficam em caixa baixa (minúsculas)"""
-# GOOD
+    texto= texto.lower()
+    texto=texto.replace("a","A")
+    texto=texto.replace("e","E")
+    texto=texto.replace("i","I")
+    texto=texto.replace("o","O")
+    texto=texto.replace("u","U")
+    
+    return texto
 
-
+#good
 def imprime_mes_por_extenso(data):
     """Faça um programa que solicite a data de nascimento (dd/mm/aaaa)
     e imprima com o nome do mês por extenso
@@ -278,7 +285,7 @@ def media_temperaturas(temperaturas):
     """
     medtemp= sum(temperaturas)/len(temperaturas)
     return medtemp
-
+#usar .return("","")
 def leet(texto):
     '''
     Converte texto em leet
