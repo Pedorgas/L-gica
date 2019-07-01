@@ -136,14 +136,12 @@ def tinta(metros_pintar):
     e retorna a quantidade de latas de tinta a comprar.
     A cobertura da tinta é de 3 metros por litro de tinta
     Cada lata possui 18 litros de tinta"""
+    import math
     quanto_pintar = metros_pintar/3
     quanta_lata = quanto_pintar/18
-    if type(quanta_lata) == float:
-        quanta_lata = int(quanta_lata)
-        quanta_lata = quanta_lata + 1
-    return quanta_lata
+    return math.ceil(quanta_lata)
 
-# question
+
 
 #GOOD
 def duzias(ovos):
@@ -177,10 +175,7 @@ def palindrome(texto):
     """Faça uma função que verifique se uma textro passado é palíndrome,
     isto é, se é igual quando lido de trás pra frente."""
     tex = texto[::1]
-    if tex == texto:
-        return True
-    else:
-        return False
+    return tex==texto
 
 
 def troca_caixa(texto):
@@ -214,12 +209,9 @@ def é_azarado(numero):
     """O último dígito não pode ser igual ao primeiro, porque isso dá azar."""
     bruh= numero[0]
     moment = numero[-1]
-    if bruh == moment:
-        return True
-    else:
-        return False
-# GOOD
+    return bruh == moment
 
+#GOOD
 
 def ondernamento_contrario(lista):
     """ Devolve a lista invertida"""
@@ -285,13 +277,27 @@ def media_temperaturas(temperaturas):
     """
     medtemp= sum(temperaturas)/len(temperaturas)
     return medtemp
-#usar .return("","")
+#GOOD
 def leet(texto):
     '''
     Converte texto em leet
     troca = {'a':'4','e':'3','g':'9','i':'1','s':'5','t':'7','o':'0'}
     '''
-   
+    texto=texto.replace("a","4")
+    texto=texto.replace("A","4")
+    texto=texto.replace("e","3")
+    texto=texto.replace("E","3")
+    texto=texto.replace("g","9")
+    texto=texto.replace("G","9")
+    texto=texto.replace("i","1")
+    texto=texto.replace("I","1")
+    texto=texto.replace("s","5")
+    texto=texto.replace("S","5")
+    texto=texto.replace("t","7")
+    texto=texto.replace("T","7")
+    texto=texto.replace("o","0")
+    texto=texto.replace("O","0")
+    return texto
     
 #GOOD
 def apaga(s, n):
