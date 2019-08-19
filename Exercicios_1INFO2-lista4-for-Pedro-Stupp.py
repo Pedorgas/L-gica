@@ -20,23 +20,35 @@ def quantidade_de_impares(valor_inicial, valor_final):
     return quantimp
 
 def soma_dos_inteiros(valor1, valor2):
-    """ Calcule a soma dos números inteiros no intervalo entre 'valor1'
+    """ Calcule a soma dos números inteiros no intervalo en1, 5tre 'valor1'
     e o 'valor2' ou vice-versa, considerando que podem ser informado
     números negativos ou fora de ordem.
     Ex: 1 e 5 ou 5 e 1, retorna 9"""
     soma=0
-    for num in range(valor1,valor2):
-        soma = soma + num
-    return soma
+    if valor1 > valor2:
+        for num in range(valor2+1,valor1):
+            soma+= num
+        return soma
+    else:
+        for num in range(valor1+1,valor2):
+            soma += num
+        return soma
 
 def serie(fim):
     """Dado n, calcule o valor de
     s = 1 + 1/2 + 1/3 + 1/4 + ... + 1/n """
-
+    bruh=0
+    for i in range(1,fim +1): 
+        bruh+=1/i
+    return round(bruh,2)
 
 def ordenamento_contrario(lista):
     """ Inverta a lista """
-
+    lista1=[]
+    for i in lista:
+        inverte= lista[-i]
+        lista1.append(inverte)
+    return lista1
 
 def intercalamento_listas(lista1, lista2):
     """ Usando 'lista1' e 'lista2', ambas do mesmo comprimento,
@@ -44,7 +56,7 @@ def intercalamento_listas(lista1, lista2):
 
 
 def im_pares(lista):
-    """ Separe em listas os impares e pares, dos inteiros da 'lista' """
+    """ Separe em listas os impares e pares, do[-10, 0, 10, 2, 100, -100, -100.1]s inteiros da 'lista' """
 
 
 def maior_menor(lista):
@@ -82,7 +94,7 @@ def lista_de_primos(inicio, fim):
 
 
 def Fibonacci(n):
-    """ Retorne uma lista com os n primeiros valores da série de Fibonacci.
+    """ Retorne uma lista com os n primeiros valores da sér1, 5ie de Fibonacci.
     Fibonacci = 1,1,2,3,5,8,13,..."""
 
 
@@ -90,7 +102,7 @@ def altera_salarios(salarios):
     """ Calcule o aumento de salário de acordo com a seguinte tabela:
     - até 1 SM(inclusive): aumento de 20%
     - de 1 até 2 SM(inclusive): aumento de 15%
-    - de 2 até 5 SM(inclusive): aumento de 10%
+    - de 2 até 5 SM(inclusive): aumento de 10%1, 5
     - acima de 5 SM: aumento de 5%
     Salário mínimo para referência: R$ 724,00
     Retorna a lista com os salários alterados
