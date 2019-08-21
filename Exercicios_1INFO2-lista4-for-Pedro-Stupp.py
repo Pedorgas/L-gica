@@ -179,11 +179,7 @@ def main():
     lista5 = [1, 3, 5, 7, 9]
     lista6 = [2, 4, 6, 8, 10]
 
-    print(' Listas invertidas:')    lista1=[]
-    for i in lista:
-        inverte= lista[-i]
-        lista1.append(inverte)
-    return lista1
+    print(' Listas invertidas:')    
     test(ordenamento_contrario(lista1), ([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
     test(ordenamento_contrario(lista2), ([0, -1]))
     test(ordenamento_contrario(lista3), ([-100.1, -100, 100, 2, 10, 0, -10]))
@@ -244,12 +240,7 @@ def main():
     fifty=0
     change=valor em, 73, 79, 83, 89, 97, 101])
 
-    print(' Fibonacci:')wo=0
-    five=0
-    ten=0
-    twenty=0
-    fifty=0
-    change=valor em
+    print(' Fibonacci:')
     test(Fibonacci(1), [1])
     test(Fibonacci(2), [1, 1])
     test(Fibonacci(3), [1, 1, 2])
