@@ -16,7 +16,7 @@ def quantidade_de_impares(valor_inicial, valor_final):
     quantimp=0
     for num in range(valor_inicial +1,valor_final):
         if num % 2 == 1:
-            quantimp =quantimp+ 1
+            quantimp += 1
     return quantimp
 
 def soma_dos_inteiros(valor1, valor2):
@@ -44,24 +44,49 @@ def serie(fim):
 
 def ordenamento_contrario(lista):
     """ Inverta a lista """
-    lista1=[]
-    for i in lista:
-        inverte= lista[-i]
-        lista1.append(inverte)
-    return lista1
 
 def intercalamento_listas(lista1, lista2):
     """ Usando 'lista1' e 'lista2', ambas do mesmo comprimento,
     crie uma nova lista composta pelo intercalamento entre as duas."""
-
-
+    wow=-1
+    lyst=[]
+    mista= [0,1,2,3,4]
+    for i in mista:
+        a=lista1[i]
+        b=lista2[i]
+        lyst.append(a)
+        lyst.append(b)
+    return lyst      
+    
 def im_pares(lista):
     """ Separe em listas os impares e pares, do[-10, 0, 10, 2, 100, -100, -100.1]s inteiros da 'lista' """
-
+    par=[]
+    impar=[]
+    for i in lista:
+        if i % 2== 1:
+            impar.append(i)
+        else:
+            par.append(i)
+    bruh= (par, impar)
+    return bruh
 
 def maior_menor(lista):
     """ Calcule o maior e o menor numero da 'lista' """
-
+    big_bruh= 0
+    small_bruh= 1
+    for i in  lista:
+        if i <0:
+            big_bruh= -1
+            small_bruh= -1  
+        else:
+            big_bruh= 0
+            small_bruh= 1
+    for i in lista:
+        if i > big_bruh:
+            big_bruh= i
+        if i < small_bruh:
+            small_bruh=i
+    return (big_bruh, small_bruh)
 
 def dar_troco(valor_a_pagar, valor_em_dinheiro):
     """ Calcule o troco numa lista com notas de 1,2,5,10,20,50 com sua
@@ -154,7 +179,11 @@ def main():
     lista5 = [1, 3, 5, 7, 9]
     lista6 = [2, 4, 6, 8, 10]
 
-    print(' Listas invertidas:')
+    print(' Listas invertidas:')    lista1=[]
+    for i in lista:
+        inverte= lista[-i]
+        lista1.append(inverte)
+    return lista1
     test(ordenamento_contrario(lista1), ([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]))
     test(ordenamento_contrario(lista2), ([0, -1]))
     test(ordenamento_contrario(lista3), ([-100.1, -100, 100, 2, 10, 0, -10]))
@@ -208,9 +237,19 @@ def main():
     test(lista_de_primos(10, 20), [11, 13, 17, 19])
     test(lista_de_primos(0, 21), [2, 3, 5, 7, 11, 13, 17, 19])
     test(lista_de_primos(43, 102), [43, 47, 53,
-                                    59, 61, 67, 71, 73, 79, 83, 89, 97, 101])
+                        wo=0
+    five=0
+    ten=0
+    twenty=0
+    fifty=0
+    change=valor em, 73, 79, 83, 89, 97, 101])
 
-    print(' Fibonacci:')
+    print(' Fibonacci:')wo=0
+    five=0
+    ten=0
+    twenty=0
+    fifty=0
+    change=valor em
     test(Fibonacci(1), [1])
     test(Fibonacci(2), [1, 1])
     test(Fibonacci(3), [1, 1, 2])
