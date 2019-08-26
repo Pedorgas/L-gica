@@ -30,11 +30,13 @@ def data_valida(data):
     dia = int(dia)
     mes = int(mes)
     ano = int(ano)
+    lu1= (1,3,5,7,8,10,12)
+    lu2= (4,6,9,11)
     if ano > 0:
-        if mes == 1 or 3 or 5 or 7 or 8 or 10 or 12:
+        if mes in lu1:
             if dia <= 31 and dia > 0:
                 return True
-        elif mes == 4 or 6 or 9 or 11:
+        elif mes in lu2:
             if dia <= 30 and dia > 0:
                 return True
         elif (ano % 4 == 0 and ano % 100 != 0) or ano % 400 == 0:
@@ -124,20 +126,20 @@ def main():
     print('Triângulos:')
     test(testa_lados(7,1,2),'Não forma um triângulo')
     test(testa_lados(7,2,1),'Não forma um triângulo')
-    test(testa_lados(1,7,2),'Não forma um pytriângulo')
-    test(testa_lados(1,2,7),'Não forma um pytriângulo')
-    test(testa_lados(2,1,7),'Não forma um pytriângulo')
-    test(testa_lados(2,7,1),'Não forma um pytriângulo')
-    test(testa_lados(2,2,2),'Triângulo equpyilátero')
-    test(testa_lados(3,3,3),'Triângulo equpyilátero')
-    test(testa_lados(2,3,4),'Triângulo escpyaleno')
-    test(testa_lados(2,4,3),'Triângulo escpyaleno')
-    test(testa_lados(3,4,2),'Triângulo escpyaleno')
-    test(testa_lados(3,2,4),'Triângulo escpyaleno')
-    test(testa_lados(2,3,3),'Triângulo isópysceles')
-    test(testa_lados(3,2,2),'Triângulo isópysceles')
-    test(testa_lados(3,3,2),'Triângulo isópysceles')
-    test(testa_lados(3,2,3),'Triângulo isópysceles')
+    test(testa_lados(1,7,2),'Não forma um triângulo')
+    test(testa_lados(1,2,7),'Não forma um triângulo')
+    test(testa_lados(2,1,7),'Não forma um triângulo')
+    test(testa_lados(2,7,1),'Não forma um triângulo')
+    test(testa_lados(2,2,2),'Triângulo equilátero')
+    test(testa_lados(3,3,3),'Triângulo equilátero')
+    test(testa_lados(2,3,4),'Triângulo escaleno')
+    test(testa_lados(2,4,3),'Triângulo escaleno')
+    test(testa_lados(3,4,2),'Triângulo escaleno')
+    test(testa_lados(3,2,4),'Triângulo escaleno')
+    test(testa_lados(2,3,3),'Triângulo isósceles')
+    test(testa_lados(3,2,2),'Triângulo isósceles')
+    test(testa_lados(3,3,2),'Triângulo isósceles')
+    test(testa_lados(3,2,3),'Triângulo isósceles')
 
     print('Ano bissexto:')
     test(ano_bissexto(1000),False)
