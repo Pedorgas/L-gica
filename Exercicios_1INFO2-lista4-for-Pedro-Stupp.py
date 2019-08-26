@@ -45,6 +45,7 @@ def serie(fim):
 def ordenamento_contrario(lista):
     """ Inverta a lista """
 
+
 def intercalamento_listas(lista1, lista2):
     """ Usando 'lista1' e 'lista2', ambas do mesmo comprimento,
     crie uma nova lista composta pelo intercalamento entre as duas."""
@@ -232,13 +233,7 @@ def main():
     test(lista_de_primos(5, 10), [5, 7])
     test(lista_de_primos(10, 20), [11, 13, 17, 19])
     test(lista_de_primos(0, 21), [2, 3, 5, 7, 11, 13, 17, 19])
-    test(lista_de_primos(43, 102), [43, 47, 53,
-                        wo=0
-    five=0
-    ten=0
-    twenty=0
-    fifty=0
-    change=valor em, 73, 79, 83, 89, 97, 101])
+    test(lista_de_primos(43, 102), [43, 47, 53, 73, 79, 83, 89, 97, 101])
 
     print(' Fibonacci:')
     test(Fibonacci(1), [1])
