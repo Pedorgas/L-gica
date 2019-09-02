@@ -44,6 +44,12 @@ def serie(fim):
 
 def ordenamento_contrario(lista):
     """ Inverta a lista """
+    listainversa=[]
+    itens=len(lista)
+    for i in range(1,itens+1):
+        j=lista[-i]
+        listainversa.append(j)
+    return listainversa
 
 
 def intercalamento_listas(lista1, lista2):
