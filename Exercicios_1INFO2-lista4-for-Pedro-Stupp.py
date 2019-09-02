@@ -139,7 +139,19 @@ def altera_salarios(salarios):
     Salário mínimo para referência: R$ 724,00
     Retorna a lista com os salários alterados
     """
-
+    lista=[]
+    for i in salarios:
+        if i <= 724.00:
+            aumento = (i  * 20) / 100
+        elif i > 724.00 and i <= 724.00*2 :
+            aumento = (i * 15) / 100
+        elif i >724.00 * 2 and i <= 724.00 *5:
+            aumento = (i * 10) / 100
+        else:
+            aumento = (i * 5) / 100
+        total = aumento + i
+        lista.append(total)
+    return lista
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
 acertos = 0
