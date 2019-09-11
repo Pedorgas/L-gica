@@ -55,10 +55,9 @@ def ordenamento_contrario(lista):
 def intercalamento_listas(lista1, lista2):
     """ Usando 'lista1' e 'lista2', ambas do mesmo comprimento,
     crie uma nova lista composta pelo intercalamento entre as duas."""
-    wow=-1
     lyst=[]
-    mista= [0,1,2,3,4]
-    for i in mista:
+    size=len(lista1)
+    for i in range(0,size):
         a=lista1[i]
         b=lista2[i]
         lyst.append(a)
@@ -98,27 +97,49 @@ def maior_menor(lista):
 def dar_troco(valor_a_pagar, valor_em_dinheiro):
     """ Calcule o troco numa lista com notas de 1,2,5,10,20,50 com sua
     quantidade de notas sem considerar centavos
-
     ex:
     1 e 10 retorna troco_notas_quantidade = [5,2] quantidade_notas = [1,2]"""
-
+    notas = (50,20,10,5,2,1)
+    valor_troco=valor_em_dinheiro-valor_a_pagar
+    troco=[]
+    for nota in notas:
+        quantidade = valor_troco // nota
+        valor_troco = valor_troco % nota
+        if quantidade != 0:
+            troco.append((nota,quantidade))
+    return troco
 
 def media_anual(temperaturas):
     """Receba uma lista com as temperaturas médias de cada mês
     e devolva uma lista com os números correspondentes aos meses
     que possuem temperatura superior á média anual."""
-
+    media= sum(temperaturas)/ len(temperaturas)
+    mes_quente=[]
+    for i,temperatura in enumerate(temperaturas):
+        if temperatura > media:
+            mes_quente.append(i)
+    return mes_quente
 
 def maiores_13(idades, alturas):
     """Esta função recebe as idades e alturas de diversas pessoas, em duas
     listas separadas e de igual comprimento.
     Calcule a media das alturas e retorne as alturas daqueles que
     possuem 'idades' maior que 13 e altura inferior a media da turma"""
-
+    media = sum(alturas)/ len(alturas)
+    menor=[]
+    for i, v in enumerate(idades):
+        if v > 13:
+            tamanho = alturas[i]
+            if tamanho < media:
+                menor.append(tamanho)
+    return menor
 
 def testa_primo(valor):
     """Recebe um valor e verifica se ele é um número primo ou não."""
-
+    for i in range(2,valor):
+        if valor % i == 0:
+            return False
+    return True
 
 def lista_de_primos(inicio, fim):
     """Retorne uma lista de primos entre os valores informados, incluindo
