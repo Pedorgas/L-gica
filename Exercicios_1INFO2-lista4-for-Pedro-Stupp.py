@@ -136,6 +136,10 @@ def maiores_13(idades, alturas):
 
 def testa_primo(valor):
     """Recebe um valor e verifica se ele é um número primo ou não."""
+    if valor == 2:
+        return True
+    if valor in (0,1) or valor % 2 == 0:
+        return False
     for i in range(2,valor):
         if valor % i == 0:
             return False
@@ -144,6 +148,11 @@ def testa_primo(valor):
 def lista_de_primos(inicio, fim):
     """Retorne uma lista de primos entre os valores informados, incluindo
     os limites"""
+    lista=[]
+    for i in range(inicio, fim +1):
+        if testa_primo(i):
+            lista.append(i)
+    return lista
 
 
 def Fibonacci(n):
