@@ -138,9 +138,9 @@ def testa_primo(valor):
     """Recebe um valor e verifica se ele é um número primo ou não."""
     if valor == 2:
         return True
-    if valor in (0,1) or valor % 2 == 0:
+    elif valor in (0,1) or valor % 2 == 0:
         return False
-    for i in range(2,valor):
+    for i in range(2, valor):
         if valor % i == 0:
             return False
     return True
@@ -158,6 +158,15 @@ def lista_de_primos(inicio, fim):
 def Fibonacci(n):
     """ Retorne uma lista com os n primeiros valores da sér1, 5ie de Fibonacci.
     Fibonacci = 1,1,2,3,5,8,13,..."""
+    ant_1= 1
+    ant_2= 0
+    fib= []
+    for i in range(n):
+        soma= ant_1+ant_2
+        ant_1=ant_2
+        ant_2=soma
+        fib.append(soma)
+    return fib
 
 
 def altera_salarios(salarios):
@@ -281,7 +290,7 @@ def main():
     test(lista_de_primos(5, 10), [5, 7])
     test(lista_de_primos(10, 20), [11, 13, 17, 19])
     test(lista_de_primos(0, 21), [2, 3, 5, 7, 11, 13, 17, 19])
-    test(lista_de_primos(43, 102), [43, 47, 53, 73, 79, 83, 89, 97, 101])
+    test(lista_de_primos(43, 102), [43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101])
 
     print(' Fibonacci:')
     test(Fibonacci(1), [1])
