@@ -22,7 +22,7 @@ def soma_dos_inteiros(valor1, valor2):
         valour1 = valor1
         valour2 = valor2
     contador= valour1 + 1
-    soma = 0
+    soma = 0  
     while contador < valour2:
         soma += contador
         contador += 1
@@ -98,27 +98,66 @@ def é_primo(valor):
 
 def quantidade_de_primos(comeco, final):
     ''' Retorne a quantidade de primos entre os valores informados'''
-
+    quantia= 0
+    contador = comeco + 1
+    while contador < final:
+        if é_primo(contador):
+            quantia +=1
+        contador += 1
+    return quantia
 
 def lista_de_primos(inicio, fim):
     '''Retorne uma lista de primos entre os valores informados, incluindo
     os limites'''
-
+    lista = []
+    contador = inicio
+    while contador <= fim:
+        if é_primo(contador):
+            lista.append(contador)
+        contador += 1
+    return lista
 
 def serie1(n):
     '''Dado n, calcule o valor de
     s = 1 + 1/2 + 1/3 + 1/4 + ... + 1/n '''
-
+    numero = 0
+    contador = 1
+    while contador <= n:
+        numero += 1/contador
+        contador += 1
+    return round(numero,2)
 
 def serie2(n):
     '''Dado n, calcule o valor de
     s = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m'''
-
+    n1 = 1
+    m2 = 1
+    numero = 0
+    contador = 1
+    while contador <= n:
+        numero += n1 / m2
+        n1 += 1
+        m2 += 2
+        contador += 1
+    return round(numero,2)
 
 def serie_pi(n):
     ''' Calcule o valor de pi através da série
     4/1 - 4/3 + 4/5 - 4/7 + ... - 4/m, sendo informado
     o número n de iterações '''
+    num_div= 1
+    numero = 0
+    contador = 1
+    pos_neg=1
+    while contador <= n:
+        if pos_neg % 2 == 0:
+            numero -= 4/num_div
+        else:
+            numero += 4/num_div
+        num_div += 2 
+        pos_neg += 1
+        contador += 1
+    return round(numero,6)
 
 
 # Área de testes: só mexa aqui se souber o que está fazendo!
