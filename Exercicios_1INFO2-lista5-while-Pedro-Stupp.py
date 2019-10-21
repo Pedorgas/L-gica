@@ -49,10 +49,8 @@ def crescimento_populacional(populacao1, populacao2, crescimento1, crescimento2)
         return 0
     contador = 0
     while populacao1 < populacao2:
-        porcentagem1= populacao1 * crescimento1 / 100
-        populacao1 += porcentagem1
-        porcentagem2= populacao2 * crescimento2 / 100
-        populacao2 += porcentagem2
+        populacao1 += populacao1 * crescimento1 / 100
+        populacao2 += populacao2 * crescimento2 / 100
         contador += 1
     return contador
 
