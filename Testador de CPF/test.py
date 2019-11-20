@@ -13,7 +13,6 @@ def testador_de_cpf(Cpf):
     contador1 = 10
     contador2 = 11
     contador3 = 0
-    contador4 = 0
     p1 = 0
     p2 = 0
     CPF = limpador_de_cpf(Cpf)
@@ -24,10 +23,11 @@ def testador_de_cpf(Cpf):
         contador1 -= 1
         contador3 += 1
     if (p1 * 10)% 11 == int(CPF[9]):
+        contador3 = 0
         while contador2 > 1:
-            p2 += int(CPF[contador4]) * contador2
+            p2 += int(CPF[contador3]) * contador2
             contador2 -= 1
-            contador4 += 1
+            contador3 += 1
         if (p2 * 10) % 11 == int(CPF[10]):
             return True
         else:
