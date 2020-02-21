@@ -54,3 +54,36 @@ ul.answers{
     align-self: center;
     flex: 1;
 }
+
+.result{
+    background-color: lightgreen;
+    color: darkgreen;
+    height: 400px;
+    width: 70%;
+    border-radius: 20px;
+    font-size: 4rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result button{
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 1,3rem;
+    color: darkgreen;
+    background-color:white ;
+    font-weight: 600;
+    border-radius: 8px; 
+
+}
+
+.result.wrong{
+    color: darkred;
+    background-color: lightcoral;
+}
+
+.result.wrong button{
+    color: darkred;
+}
