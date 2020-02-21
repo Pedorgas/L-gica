@@ -1,0 +1,102 @@
+body {
+background:linear-gradient(to right, rgb(0, 60, 0) ,rgb(169, 236, 163));
+height:100vh ;
+color: #fff;
+font-family: 'Montserrat',sans-serif;
+}
+
+#quiz{
+    text-align:center ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#quiz h1{
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+.question{
+    background-color:snow ;
+    color: #000000;
+    font-size: 2.5rem;
+    height: 400px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+ul.answers{
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.answers li{
+    margin: 20px;
+    display: flex;
+    background-color: #89c454;
+    width: 40%;
+    align-self: center;
+    border-radius: 8px;
+}
+
+.answers .number{
+    background-color: darkgreen;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    flex-basis: 30px;
+}
+
+.answers .text{
+    align-self: center;
+    flex: 1;
+}
+
+.result{
+    background-color: lightgreen;
+    color: darkgreen;
+    height: 400px;
+    width: 70%;
+    border-radius: 20px;
+    font-size: 4rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result button{
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 1,3rem;
+    color: darkgreen;
+    background-color:white ;
+    font-weight: 600;
+    border-radius: 8px; 
+
+}
+
+.result.wrong{
+    color: darkred;
+    background-color: lightcoral;
+}
+
+.result.wrong button{
+    color: darkred;
+}
+
+.result.chungus{
+    color: #000000;
+    background-color: darkgrey;
+}
+
+.result.chungus button{
+    color: black;
+}
+
+img{
+    align-self: center;
+}
