@@ -25,6 +25,28 @@
             }
         }
 
+        function sexo(valor) {
+            if (valor.toUpperCase() == "M") {
+                return "Masculino"
+            }
+            else if (valor.toUpperCase() == "F") {
+                return "Feminino"
+            } else {
+                return "valor inválido"
+            }
+        }
+
+        function par(valor) {
+            if (valor % 2 == 0) {
+                return true
+            } else {
+                return false
+            }
+        }
+        function par2(valor) {
+            return (valor % 2 == 0)
+        }
+
 
         var v1 = 10, v2 = 30
         var resultado = soma(v1, v2)
@@ -32,6 +54,14 @@
         console.log(pet("C"))
         console.log(pet("G"))
         console.log(pet("minecraft é melhor que fortnite"))
+        console.log(sexo("M"))
+        console.log(sexo("F"))
+        console.log(sexo("m"))
+        console.log(sexo("p"))
+        console.log(par(20))
+        console.log(par(23))
+        console.log(par2(20))
+        console.log(par2(23))
 
 
         var nome = "PedrinGameplays"
