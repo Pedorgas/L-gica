@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correção</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-columns: 200px 1fr;
+            margin:0;
+            height: 100vh;
+        }
+
+        header{
+            background-color: rgb(0, 167, 167);
+            grid-area: 1/1/2/3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav{
+            background-color: rgb(114, 104, 104);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items:center ;
+        }
+
+        nav ul li{
+            display:flex;
+        }
+
+        main{
+            background-color: rgb(221, 168, 98);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        article{
+            background-color: whitesmoke;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 40%;
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        span{
+            font-weight: 600;
+            font-size: 30px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+
+        footer{
+            background-color: rgb(0, 204, 85);
+            grid-area: 3/1/4/3;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>Cabeçalho</header>
+    <nav>
+        MENU
+        <ul>
+            <li>texto1</li>
+            <li>texto2</li>
+            <li>texto3</li>
+        </ul>
+    </nav>
+
+    <main>
+        <span>Conteudo</span>
+        <article>sub-conteudo1</article>
+        <article>sub-conteudo2</article>
+        <article>sub-conteudo3</article>
+        <article onclick="location.href='https://www.youtube.com/user/PewDiePie'">subscribe to Pewdiepie</article>
+    </main>
+    <footer>
+        <div class="logo">logo</div>
+        <div class="contato">Contato</div>
+    </footer>
+</body>
+</html>
