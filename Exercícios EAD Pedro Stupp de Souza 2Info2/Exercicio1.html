@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 1</title>
+</head>
+
+<body>
+
+
+    <script>
+        function enderecoFormatado() {
+           return ("O usuário mora em " + endereco.cidade + "/" + endereco.uf
+            + " no bairro " + endereco.bairro + " na rua "
+            + endereco.rua + " com o nº " + endereco.numero + ".") 
+        }
+        var endereco = { 
+            rua: "Rua dos Príncipes",  
+            numero: 123,  
+            bairro: "Centro",  
+            cidade: "Joinville",  
+            uf: "SC"
+        }
+        console.log(enderecoFormatado(endereco))
+    </script>
+</body>
+</html>
